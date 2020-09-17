@@ -8,7 +8,9 @@ const title = "Sorting Articles";
 
 const App= ({articles}) => {
 
-    const [updatedArticles, modifyArticles]= useState(articles.sort((a,b)=>b.upvotes-a.upvotes))
+    const sortedByUpvotes= articles.sort((a,b)=>b.upvotes-a.upvotes)
+
+    const [updatedArticles, modifyArticles]= useState(sortedByUpvotes)
 
     return (
         <div className="App">
